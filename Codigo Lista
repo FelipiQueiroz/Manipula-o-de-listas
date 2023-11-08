@@ -1,0 +1,35 @@
+const myArray = [1, 49, 39, 23, 53, 53, 34, 39, 80, 152, 323];
+
+const tamanhoLista = myArray.length;
+console.log("a) Tamanho da lista:", tamanhoLista);
+
+const somaValores = myArray.reduce((total, valor) => total + valor, 0);
+console.log("b) Soma de todos os valores:", somaValores);
+
+const novaListaMaior65 = myArray.filter(valor => valor > 65);
+console.log("c) Nova lista com valores maiores que 65:", novaListaMaior65);
+
+const valoresRemover = [53, 80];
+const listaAposRemocao = myArray.filter(valor => !valoresRemover.includes(valor));
+console.log("d) Lista após a remoção de 53 e 80:", listaAposRemocao);
+
+const valorProcurado = 152;
+const encontrado = myArray.includes(valorProcurado);
+console.log("e) Valor 152 encontrado na lista:", encontrado);
+
+const numerosPares = myArray.filter(valor => valor % 2 === 0);
+console.log("f) Nova lista com números pares:", numerosPares);
+
+myArray.push(12);
+console.log("g) Lista com valor 12 incluído no final:", myArray);
+
+myArray.unshift(25);
+console.log("h) Lista com valor 25 incluído no início:", myArray);
+
+const valorRemovidoDoFinal = myArray.pop();
+console.log("i) Valor removido do final da lista:", valorRemovidoDoFinal);
+console.log("   Lista após a remoção:", myArray);
+
+const valorRemovidoDoInicio = myArray.shift();
+console.log("j) Valor removido do início da lista:", valorRemovidoDoInicio);
+console.log("   Lista após a remoção:", myArray);
